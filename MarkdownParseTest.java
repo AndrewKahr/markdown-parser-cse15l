@@ -170,6 +170,15 @@ public class MarkdownParseTest {
        }
     }
     
+    @Test
+    public void testFile9test() {
+       try {
+           assertEquals(List.of(),
+                   MarkdownParse.getLinks(readString("test-file9.md")));
+       } catch (IOException e) {
+           fail();
+       }
+    }
 }
 
 
