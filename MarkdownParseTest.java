@@ -163,7 +163,7 @@ public class MarkdownParseTest {
     @Test
     public void testFailingTest() {
        try {
-           assertEquals(List.of("badlink.html"),
+           assertEquals(List.of(),
                    MarkdownParse.getLinks(readString("test-file8.md")));
        } catch (IOException e) {
            fail();
