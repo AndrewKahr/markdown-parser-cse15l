@@ -159,6 +159,16 @@ public class MarkdownParseTest {
            fail();
        }
     }
+
+    @Test
+    public void testFailingTest() {
+       try {
+           assertEquals(List.of("badlink.html"),
+                   MarkdownParse.getLinks(readString("test-file8.md")));
+       } catch (IOException e) {
+           fail();
+       }
+    }
     
 }
 
